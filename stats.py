@@ -12,3 +12,13 @@ def char_count(text):
         else:
             char_count_dic[char] += 1
     return char_count_dic
+
+def sort_on(items):
+    return items["num"]
+
+def sort_char(dic):
+    list = []
+    for i in dic:
+        list.append({"char" : i,"num" : dic[i]})
+    list.sort(reverse=True, key=sort_on)
+    return list 
